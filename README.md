@@ -762,7 +762,7 @@ Thanks for supporting my works on this project! If you want to make a donation t
 Credits
 ---------
 
-* [fancoder](//github.com/fancoder) - Developper on cryptonote-universal-pool project from which current project is forked.
+* [dvandal](//github.com/dvandal) - Developper on cryptonote-nodejs-pool project from which current project is forked.
 
 License
 -------
