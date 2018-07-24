@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-    <title>Cryptonote Mining Pool</title>
+    <link rel="icon" href="/coin_32.png" type="image/ico" />  
+    <html prefix="og: http://ogp.me/ns#">
+    <meta property="og:image" content="https://www.optimusblue.com/logos/coin_128.png" />
+    <meta property="og:site_name" content="OptimusBlue - COIN Mining Pool" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="COIN Mining Pool" />
+    <meta property="og:url" content="https://coin.optimusblue.com/" />
+    <meta property="og:description" content="COIN Mining pool based in the US and in full support of decentralization." />
+    <title>OptimusBlue - COIN Mining Pool</title>
+    <meta name="description" content="COIN Mining pool based in the US and in full support of decentralization.">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
@@ -22,7 +31,7 @@
 
     <!-- Navigation -->
     <div class="nav-side-menu">
-        <div class="brand"><a href="/"><span id="coinSymbol"></span> <span tkey="miningPool">Mining Pool</span></a></div>
+	    <div class="brand"><a href="/"><img src="msr_128.png" style="vertical-align:middle" width="128" height="128"><br /><span id="coinSymbol"></span> <span tkey="miningPool">Mining Pool</span></a></div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>  
         <div class="menu-list">
             <ul id="menu-content" class="menu-content collapsed out">
@@ -62,6 +71,10 @@
                 <li><a class="hot_link" data-page="faq.html" href="#faq">
                     <i class="fa fa-comments"></i> <span tkey="faq">FAQ</span>
                 </a></li>
+	
+		<li><a class="hot_link" href="http://optimusblue.com" target="_blank">
+		    <i class="fa fa-address-card"></i> <span tkey="about">About OptimusBlue</span>
+	        </a></li>
 
             </ul>
         </div>
@@ -88,9 +101,9 @@
 <!-- Footer -->
 <footer>
     <div class="text-muted">
-        <span tkey="poweredBy">Powered by</span> <a target="_blank" href="https://github.com/dvandal/cryptonote-nodejs-pool"><i class="fa fa-github"></i> cryptonote-nodejs-pool</a>
+        <span tkey="poweredBy">Powered by</span> <a target="_blank" href="https://github.com/OptimusBlue/cryptonote-nodejs-pool-OptimusBlue-Fork"><i class="fa fa-github"></i> OptimusBlue Pools</a>
         <span id="poolVersion"></span>
-        <span class="hidden-xs"><span tkey="openSource">open sourced under the</span> <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a></span>
+        <span class="hidden-xs"><span tkey="openSource">open sourced under the</span> <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a> - Theme adapted by DeadSet for OptimusBlue</span>
     </div>
 </footer>
 
@@ -192,8 +205,8 @@ $(function(){
         $('#menu-content').append('<li><a target="_new" href="'+telegram+'"><i class="fa fa-telegram"></i> <span tkey="telegram">Telegram group</span></a></li>');
     }
     if (typeof discord !== 'undefined' && discord) {
-        $('#menu-content').append('<li><a target="_new" href="'+discord+'"><i class="fa fa-ticket"></i> <span tkey="discord">Discord</span></a></li>');
-    }
+	            $('#menu-content').append('<li><a target="_new" href="'+discord+'"><i class="fa fa-ticket"></i> <span tkey="discord">Discord</span></a></li>');
+	        }
     if (typeof email !== 'undefined' && email) {
         $('#menu-content').append('<li><a target="_new" href="mailto:'+email+'"><i class="fa fa-envelope"></i> <span tkey="contactUs">Contact Us</span></a></li>');
     }
@@ -207,5 +220,18 @@ $(function(){
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
+  const crate = new Crate({
+  server: '464909036119261184',
+  channel: '464909036119261186',
+  shard: 'https://cl5.widgetbot.io'
+  })
+
+ /*crate.notify('Test notification')
+ crate.on('signIn', data => {
+ console.log(`Guest signed in as ${data.name}`)
+ crate.emit('sendMessage', 'Hello world')
+ })*/
+</script>
 </body>
 </html>

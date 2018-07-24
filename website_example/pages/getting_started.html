@@ -1,5 +1,6 @@
 <!-- Connection Details -->
-<div class="row">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body><div class="row">
     <div class="col-sm-6">
         <h3><span tkey="connectionDetails">Connection Details</span></h3>
         <div class="card padding-l-10 padding-r-10">
@@ -9,7 +10,7 @@
             </div>
         </div>
 
-        <h4 class="push-up-15"><span tkey="username">Username<span></h4>
+        <h4 class="push-up-15"><span tkey="username">Username<span></span></span></h4>
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
                 <div><i class="fa fa-key"></i> <span tkey="usernameDesc">This is your wallet address</span></div>
@@ -69,29 +70,29 @@
         <div class="col-sm-6 col-xs-12">
             <div class="input-group push-down-5">
                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                <input class="form-control" id="gAddress" type="text" tplaceholder="addressField" placeholder="Wallet Address" required="required" />
+                <input class="form-control" id="gAddress" tplaceholder="addressField" placeholder="Wallet Address" required="required" type="text">
             </div>
         </div>
         <div class="col-sm-6 col-xs-12">
             <div class="input-group push-down-5">
                 <span class="input-group-addon"><i class="fa fa-exchange"></i></span>
-                <input class="form-control" id="gPaymentID" type="text" tplaceholder="paymentIdField" placeholder="Payment ID for exchanges (optional)" />
+                <input class="form-control" id="gPaymentID" tplaceholder="paymentIdField" placeholder="Payment ID for exchanges (optional)" type="text">
             </div>
         </div>
         <div class="col-sm-6 col-xs-12">
             <div class="input-group push-down-5">
                 <span class="input-group-addon"><i class="fa fa-server"></i></span>
-                <input class="form-control" id="gWorkerName" tplaceholder="workerNameField" type="text" placeholder="Worker_Name" /> 
+                <input class="form-control" id="gWorkerName" tplaceholder="workerNameField" placeholder="Worker_Name" type="text"> 
             </div>
         </div>
         <div class="col-sm-6 col-xs-12">
             <div class="input-group push-down-5">
                 <span class="input-group-addon"><i class="fa fa-wrench"></i></span>
-                <input class="form-control" id="gDifficulty" type="text" tplaceholder="fixedDiffField" placeholder="Fixed difficulty (optional)" />
+                <input class="form-control" id="gDifficulty" tplaceholder="fixedDiffField" placeholder="Fixed difficulty (optional)" type="text">
             </div>
         </div>
         <div class="col-md-12 push-up-5">
-            <input id="generateConf" type="submit" tvalue="generateConfig" value="Generate configuration" class="btn btn-default"  data-toggle="collapse" href="#xmrstak" />
+            <input id="generateConf" tvalue="generateConfig" value="Generate configuration" class="btn btn-default" data-toggle="collapse" href="#xmrstak" type="submit">
         </div>
     </div>
 </div>
@@ -113,10 +114,10 @@
 	    
 	    <!-- XMR Stak -->
             <tr class="appInfo">
-                <td class="miningAppTitle">XMR Stak</td>
-                <td>CPU & GPU (AMD/NVIDIA)</td>
-                <td>Easy to use CPU + GPU Mining App</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/fireice-uk/xmr-stak/releases/latest"><span tkey="download">Download</span></a></td>
+		    <td class="miningAppTitle">MSR Stak (Recommended)</td>
+                <td>CPU &amp; GPU (AMD/NVIDIA)</td>
+		<td>Easy to use CPU + GPU Mining App</td>
+                <td><a class="btn btn-success" target="_blank" href="https://github.com/masari-project/masari-xmr-stak/releases/"><span tkey="download">Download</span></a></td>
                 <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrstak" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
@@ -135,7 +136,7 @@
         "pool_weight": 1
     },
 ],
-"currency": "<span id="xmrstakAlgo"></span>",</code></pre>
+"currency": "cryptonight_masari",</code></pre>
 
                     </div>
                 </td>
@@ -153,14 +154,19 @@
                 <td colspan="5">
                     <div class="collapse" id="xmrig">
 		
-<pre><code>"pools": [
+<pre><code>Only XMRIG 2.6.3 and later is compatible
+
+"algo": "cn/msr",
+
+
+"pools": [
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
         "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
         "keepalive": true,
         "nicehash": false,
-        "variant": 1
+        "variant": 4
     }
 ],</code></pre>
 
@@ -168,59 +174,38 @@
                 </td>
             </tr>
 
-	    <!-- XMRig-AMD -->
+    	    <!-- XMRig-AMD -->
             <tr class="appInfo">
                 <td class="miningAppTitle">XMRig-AMD</td>
                 <td>OpenCL (AMD)</td>
                 <td>XMRIG version for AMD GPU</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-amd/releases/latest"><span tkey="download">Download</span></a></td>
+                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-amd/releases"><span tkey="download">Download</span></a></td>
                 <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-amd" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
                     <div class="collapse" id="xmrig-amd">
-		
-<pre><code>"pools": [
+
+<pre><code>
+"algo": "cn/msr",
+
+
+"pools": [
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
+        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
         "keepalive": true,
         "nicehash": false,
-        "variant": 1
+        "variant": 4
     }
+
 ],</code></pre>
 
-                    </div>
+                   </div>
                 </td>
-            </tr>
+        </tr>
 
-	    <!-- XMRig-NVIDIA -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRig-NVIDIA</td>
-                <td>Cuda (Nvidia)</td>
-                <td>XMRIG version for Nvidia GPU</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-nvidia/releases/latest"><span tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-nvidia" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig-nvidia">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
-        "keepalive": true,
-        "nicehash": false,
-        "variant": 1
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
 
 	    <!-- XMRigCC -->
             <tr class="appInfo">
@@ -382,3 +367,4 @@ $('#generateConf').click(function() {
     updateTextClasses('examplePassword', password);    
 });
 </script>
+</body></html>

@@ -1,5 +1,6 @@
 <!-- Statistics -->
-<div id="blocksStats" class="row">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body><div id="blocksStats" class="row">
 
     <!-- Total Blocks Mined -->
     <div class="col-lg-3 col-sm-4">
@@ -79,7 +80,7 @@
 <!-- Javascript -->
 <script>
 // Hide blocks chart on load
-$('#blocksChart').hide();
+$('#blocksChart').show();
 
 // Update current page
 currentPage = {
@@ -115,7 +116,7 @@ function generateChart(data) {
     var title = getTranslation('poolBlocks') ? getTranslation('poolBlocks') : 'Blocks found';
     if (chartDays) {
         if (chartDays === 1) title = getTranslation('blocksFoundLast24') ? getTranslation('blocksFoundLast24') : 'Blocks found in the last 24 hours';
-        else title = getTranslation('blocksFoundLastDays') ? getTranslation('blocksFoundLastDays') : 'Blocks found in the last {DAYS} days';
+        else title = getTranslation('blocksFoundLastDays') ? getTranslation('blocksFoundLastDays') : 'Blocks found in the last {DAYS} days (CDT Time)';
         title = title.replace('{DAYS}', chartDays);
     }
     updateText('blocksChartTitle', title);
@@ -312,3 +313,4 @@ $('#loadMoreBlocks').click(function(){
     });
 });
 </script>
+</body></html>

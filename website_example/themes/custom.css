@@ -1,1 +1,14 @@
-/* Insert your pool's unique CSS here */
+.infoBox { background-color: #4cb860; }
+#top-bar, .hashInfo, .nav-side-menu ul .active, .nav-side-menu li .active, .nav-side-menu li:hover { background-color: #658289; }
+.nav-side-menu .brand { background-color: #313131; }
+.stats > div:not(#addressError) > i.fa, .stats > div:not(#addressError) > span:not(.input-group-btn):first-of-type { color: #658289; }
+.table > thead > tr > th { color: #658289; border-bottom-color: #658289; }
+.input-group-addon { color: #658289; }
+
+.chart a.chart-style {
+  display: none; /* never displayed; we just use it to store the following colors: */
+  background-color: rgba(0, 102, 95, .2);
+  border-color: #4cb860;
+  width: 2px; /* controls the chart border width (must be specified in px) */
+}
+
