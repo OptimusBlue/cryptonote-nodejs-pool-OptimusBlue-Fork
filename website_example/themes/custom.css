@@ -1,5 +1,5 @@
 .infoBox { background-color: #4cb860; }
-#top-bar, .hashInfo, .nav-side-menu ul .active, .nav-side-menu li .active, .nav-side-menu li:hover { background-color: #658289; }
+#top-bar, .nav-side-menu ul .active, .nav-side-menu li .active, .nav-side-menu li:hover { background-color: #658289; }
 .nav-side-menu .brand { background-color: #313131; }
 .stats > div:not(#addressError) > i.fa, .stats > div:not(#addressError) > span:not(.input-group-btn):first-of-type { color: #658289; }
 .table > thead > tr > th { color: #658289; border-bottom-color: #658289; }
@@ -10,5 +10,44 @@
   background-color: rgba(0, 102, 95, .2);
   border-color: #4cb860;
   width: 2px; /* controls the chart border width (must be specified in px) */
+}
+
+.poolInfo {
+  background-color: #658289;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  cursor: default;
+  padding: 15px;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px){
+  .poolInfo {
+    margin-bottom: 15px;
+  }
+}
+.poolInfo .text {
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.poolInfo .content {
+  overflow: hidden;
+}
+.poolInfo .content .value {
+  float: left;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  padding-right: 8px;
+}
+.poolInfo .content .value a {
+  color: #fff;
+}
+.poolInfo .content .time {
+  float: left;
+  font-size: 15px;
+  font-weight: normal;
 }
 
