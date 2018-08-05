@@ -1,8 +1,8 @@
 var api = "http://poolhost:8117";
 
-var email = "support@poolhost.com";
-var telegram = "https://t.me/YourPool";
-var discord = "https://discordapp.com/invite/YourPool";
+var email = "optimusblue@gmail.com";
+var telegram = "https://t.me/OptimusBlue";
+var discord = "https://discord.gg/BVTWwhP";
 
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
