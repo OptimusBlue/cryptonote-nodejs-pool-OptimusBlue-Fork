@@ -1,6 +1,5 @@
 <!-- Statistics -->
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body><div id="blocksStats" class="row">
+<div id="blocksStats" class="row">
 
     <!-- Total Blocks Mined -->
     <div class="col-lg-3 col-sm-4">
@@ -80,7 +79,7 @@
 <!-- Javascript -->
 <script>
 // Hide blocks chart on load
-$('#blocksChart').show();
+$('#blocksChart').hide();
 
 // Update current page
 currentPage = {
@@ -108,7 +107,7 @@ currentPage = {
 };
 
 // Chart
-var displayedChart = false;
+var displayedChart = true;
 function generateChart(data) {
     if (displayedChart || !data || data === "undefined") return ;
 
@@ -313,4 +312,3 @@ $('#loadMoreBlocks').click(function(){
     });
 });
 </script>
-</body></html>

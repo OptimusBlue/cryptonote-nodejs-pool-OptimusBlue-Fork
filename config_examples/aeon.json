@@ -1,16 +1,15 @@
 {
     "poolHost": "your.pool.host",
 
-    "coin": "loki",
-    "symbol": "LOKI",
-    "coinUnits": 1000000000,
-    "coinDecimalPlaces": 4,
-    "coinDifficultyTarget": 120,
+    "coin": "aeon",
+    "symbol": "AEON",
+    "coinUnits": 1000000000000,
+    "coinDecimalPlaces": 12,
+    "coinDifficultyTarget": 240,
 
-    "daemonType": "default",
-    "cnAlgorithm": "cryptonight_heavy",
-    "cnVariant": 0,
-    "cnBlobType": 5,
+    "cnAlgorithm": "cryptonight_light",
+    "cnVariant": 1,
+    "cnBlobType": 0,
 
     "logging": {
         "files": {
@@ -28,7 +27,6 @@
         "enabled": true,
         "clusterForks": "auto",
         "poolAddress": "** Your pool wallet address **",
-        "intAddressPrefix": 115,
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -67,7 +65,7 @@
                 "desc": "SSL connection",
                 "ssl": true
             }
-        ],
+],
         "varDiff": {
             "minDiff": 100,
             "maxDiff": 100000000,
@@ -77,7 +75,8 @@
             "maxJump": 100
         },
         "paymentId": {
-            "addressSeparator": "+"
+            "addressSeparator": "+",
+            "validation": true
         },
         "fixedDiff": {
             "enabled": true,
@@ -106,32 +105,31 @@
 
     "payments": {
         "enabled": true,
-        "interval": 1800,
-        "maxAddresses": 50,
-        "mixin": 10,
+        "interval": 600,
+        "maxAddresses": 20,
+        "mixin": 3,
         "priority": 0,
-        "transferFee": 50000000,
+        "transferFee": 10000000000,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 5000000000,
-        "maxPayment": null,
+        "minPayment": 250000000000,
         "maxTransactionAmount": 0,
-        "denomination": 100000000
+        "denomination": 10000000000
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
         "depth": 60,
-        "poolFee": 0.8,
-        "devDonation": 0.2,
-        "networkFee": 5.0
+        "poolFee": 0.0,
+        "devDonation": 0.0,
+        "networkFee": 0.0
     },
 
     "api": {
         "enabled": true,
         "hashrateWindow": 600,
-        "updateInterval": 5,
+        "updateInterval": 3,
         "bindIp": "0.0.0.0",
         "port": 8117,
         "blocks": 30,
@@ -147,12 +145,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 22023
+        "port": 11181
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 22024
+        "port": 11188
     },
 
     "redis": {
@@ -232,9 +230,8 @@
         },
         "botCommands": {
             "stats": "/stats",
-            "report": "/report",
-            "notify": "/notify",
-            "blocks": "/blocks"
+            "enable": "/enable",
+            "disable": "/disable"
         }
     },
     
@@ -300,19 +297,9 @@
                 "stepInterval": 1800,
                 "maximumPeriod": 86400
             },
-            "worker_hashrate": {
-                "enabled": true,
-                "updateInterval": 60,
-                "stepInterval": 60,
-                "maximumPeriod": 86400
-            },
             "payments": {
                 "enabled": true
             }
-        },
-        "blocks": {
-            "enabled": true,
-            "days": 30
         }
     }
 }
