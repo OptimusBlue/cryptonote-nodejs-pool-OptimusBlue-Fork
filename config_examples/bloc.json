@@ -1,15 +1,16 @@
 {
     "poolHost": "your.pool.host",
 
-    "coin": "arqma",
-    "symbol": "ARQ",
-    "coinUnits": 1000000000,
-    "coinDecimalPlaces": 9,
+    "coin": "BLOC.MONEY",
+    "symbol": "BLOC",
+    "coinUnits": 10000,
+    "coinDecimalPlaces": 4,
     "coinDifficultyTarget": 120,
 
-    "cnAlgorithm": "cryptonight_light",
+    "daemonType": "bytecoin",
+    "cnAlgorithm": "cryptonight_heavy",
     "cnVariant": 1,
-    "cnBlobType": 0,
+    "cnBlobType": 2,
 
     "logging": {
         "files": {
@@ -27,9 +28,9 @@
         "enabled": true,
         "clusterForks": "auto",
         "poolAddress": "** Your pool wallet address **",
-        "intAddressPrefix": 19,
+        "intAddressPrefix": 249588424,
         "blockRefreshInterval": 1000,
-        "minerTimeout": 900,
+        "minerTimeout": 300,
         "sslCert": "./cert.pem",
         "sslKey": "./privkey.pem",
         "sslCA": "./chain.pem",
@@ -105,25 +106,26 @@
 
     "payments": {
         "enabled": true,
-        "interval": 600,
-        "maxAddresses": 20,
-        "mixin": 6,
+        "interval": 900,
+        "maxAddresses": 50,
+        "mixin": 0,
         "priority": 0,
-        "transferFee": 2000000,
+        "transferFee": 1,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 1000000000,
-        "maxTransactionAmount": 0,
-        "denomination": 100000000
+        "minPayment": 50000,
+        "maxTransactionAmount": 250000000,
+        "denomination": 10000
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
-        "depth": 18,
+        "depth": 50,
         "poolFee": 0.8,
-        "devDonation": 0.2,
-        "networkFee": 0.0
+        "devDonation": 0.0,
+        "networkFee": 0.0,
+        "fixBlockHeightRPC": false
     },
 
     "api": {
@@ -145,12 +147,13 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 19994
+        "port": 2086
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 19995
+        "port": 8070,
+        "password": "RPCpassword"
     },
 
     "redis": {
@@ -230,8 +233,9 @@
         },
         "botCommands": {
             "stats": "/stats",
-            "enable": "/enable",
-            "disable": "/disable"
+            "report": "/report",
+            "notify": "/notify",
+            "blocks": "/blocks"
         }
     },
     
@@ -242,12 +246,12 @@
         },
         "wallet": {
             "checkInterval": 60,
-            "rpcMethod": "getbalance"
+            "rpcMethod": "getBalance"
         }
     },
 
     "prices": {
-        "source": "altex",
+        "source": "tradeogre",
         "currency": "USD"
     },
     
