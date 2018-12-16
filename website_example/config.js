@@ -3,7 +3,7 @@ var api = "http://poolhost:8117";
 var email = "optimusblue@gmail.com";
 var telegram = "https://t.me/OptimusBlue";
 var discord = "https://discord.gg/BVTWwhP";
-var facebook = "https://www.facebook.com/<YourPoolFacebook>";
+var facebook = "https://www.facebook.com/optimusbluecrypto";
 
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
